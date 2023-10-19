@@ -72,8 +72,10 @@ namespace Busqueda
             while (inicio <= final && centinela == false)
             {
                 media = (inicio + final) / 2;
-                if (matriz[media] == numero)
+                if (matriz[media] == numero) { 
                     centinela = true;
+                    Console.WriteLine($"El elemento {numero} se encuentra en la posicion {media} ");
+                }
                 if (matriz[media]>numero)
                     final= media-1;
                 else
