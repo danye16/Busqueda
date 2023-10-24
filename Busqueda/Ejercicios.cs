@@ -88,6 +88,35 @@ namespace Busqueda
 
         }
 
+        public void Binario2()
+        {
+            string[] matriz = { "a", "b", "c", "d", "e" };
+            Console.WriteLine("Ingrese el caracter a buscar");
+            string palabra = Console.ReadLine();
+            bool centinela = false;
+            int media = 0;
+            int inicio = 0;
+            int final = matriz.Length;
+            while (inicio <= final && centinela == false)
+            {
+                media = (inicio + final) / 2;
+                if (string.Compare(palabra, matriz[media])==0)
+                {
+                    centinela = true;
+                    Console.WriteLine($"El elemento {palabra} se encuentra en la posicion {media} ");
+                }
+                if (string.Compare(palabra, matriz[media]) < 0)
+                    final = media - 1;
+                else
+                    inicio = media + 1;
+            }
+            if (centinela == false)
+            {
+                Console.WriteLine($"El elemento {palabra} no existe ");
+            }
+
+        }
+
     }
 }
 
