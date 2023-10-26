@@ -11,7 +11,9 @@
             // ejercicios.Lineal2();
             // ejercicios.Lineal3();
             //ejercicios.Binario1();
-            ejercicios.Binario2();
+           // ejercicios.Binario2();
+            ejercicios.Binario3();
+
         }
     }
 }

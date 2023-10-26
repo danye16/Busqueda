@@ -116,8 +116,43 @@ namespace Busqueda
             }
 
         }
+        public void Binario3()
+        {
+            int[] matriz = { 1, 3, 5, 7, 8, };
+          
+            bool centinela = false;
+            int media = 0;
+            int inicio = 0;
+            int final = 4;
+            while (inicio <= final && centinela == false)
+            {
+                media = inicio + (final-inicio) / 2;
+                if (matriz[media] % 2 == 0)
+                {
+                    centinela = true;
+                    Console.WriteLine($"El elemento {matriz[media]} se encuentra en la posicion {media}  y es par");
+                
+                if (media==0 || matriz[media-1] %2 != 0)
+                {
+                }
+                else
+                {
+                    final = media - 1;
+                }
+                }
+                else { inicio = media + 1; }
+                
+            }
+            if (centinela == false)
+            {
+                Console.WriteLine($"El elemento Par no existe ");
+            }
 
+        }
     }
+ 
+    
+
 }
 
 
